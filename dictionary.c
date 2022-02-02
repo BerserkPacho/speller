@@ -63,6 +63,7 @@ bool load(const char *dictionary)
 
         words++;
         //%s refers to a string, it will "automatically" parse the words, instead of you having to do the hard work with fread;
+        //and EOF means "end of file", so this loop will scan each string of the file to a ptr until the end of the file 
         node *newNode = malloc(sizeof(node));
         if(newNode == NULL)
         {
